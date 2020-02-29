@@ -1,0 +1,11 @@
+00Contents This file
+
+Sections the sections included in the document
+
+protocol_doc.tex Source for the document layout
+
+protocol_doc.pdf Built pdf for the document
+
+pagepc.sty Package to get pagenumbers in the chapter-page format 
+
+refman.cls The refman classes

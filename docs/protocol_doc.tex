@@ -1,0 +1,96 @@
+\documentclass[twoside,a4paper]{refart}
+
+%%%%%%%%%%%
+% IMPORTS %
+%%%%%%%%%%%
+
+\usepackage{makeidx}
+\usepackage{ifthen}
+
+\usepackage{xcolor}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    allcolors=darkgray
+}
+
+%%%%%%%%%%%%
+% COMMANDS %
+%%%%%%%%%%%%
+
+\def\bs{\char'134 } % backslash in \tt font.
+\newcommand{\ie}{i.\,e.,}
+\newcommand{\eg}{e.\,g..}
+\DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
+
+\newcommand{\thetitle}{Communications Protocol}
+
+%%%%%%%%%%%%%%
+% TITLE PAGE %
+%%%%%%%%%%%%%%
+
+\title{\thetitle}
+\author{
+        Vijay Bajracharya   \\
+        Nick Hayes\\
+        Rohun Kaddu\\
+        Mateo Lopez \\
+        Carson Storm \\
+        Adian Taylor
+}
+
+\date{}
+
+%%%%%%%%%%%%%%%
+% PAGE STYLES %
+%%%%%%%%%%%%%%%
+
+\emergencystretch1em  %
+
+\pagestyle{myfootings}
+\markboth{\thetitle}{\thetitle}
+
+\setcounter{tocdepth}{2}
+
+%%%%%%%%%%%%
+% DOCUMENT %
+%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+        \input{Sections/abstract}
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%
+% CONTENTS %
+%%%%%%%%%%%%
+
+\section{Introduction}
+
+\input{Sections/intro}
+
+\section{Managing Spreadsheets}
+
+\input{Sections/manage_spreadsheets}
+
+\section{Accessing a Spreadsheet}
+
+\input{Sections/access_spreadsheet}
+
+\section{Editing a Spreadsheet}
+
+\input{Sections/editing_spreadsheet}
+
+\section{Messages}
+
+\input{Sections/messages}
+
+\end{document}
