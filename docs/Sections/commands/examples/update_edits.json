@@ -1,0 +1,9 @@
+{
+    "update": "edits",
+    "id": 1,
+    "edits": [
+        {
+            "A1": "foo"
+        }
+    ]
+}
