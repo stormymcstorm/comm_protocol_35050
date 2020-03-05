@@ -1,0 +1,7 @@
+{
+    "result": "list",
+    "ok": true,
+    "spreadsheets": [
+        1, 2, 3, 4
+    ]
+}

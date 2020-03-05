@@ -1,0 +1,5 @@
+{
+    "result": "get_history",
+    "ok": false,
+    "error": "Spreadsheet does not exist"
+}

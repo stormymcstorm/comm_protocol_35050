@@ -1,0 +1,5 @@
+{
+    "result": "push",
+    "ok": false,
+    "error": "Edits cause a circular dependency"
+}

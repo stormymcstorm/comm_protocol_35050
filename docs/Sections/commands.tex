@@ -1,0 +1,67 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+% Table describing all of the commands
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|}\hline
+        Command & Description \\\hline
+        \hyperref[sec:message:create]{create} & Creates a new spreadsheet \\\hline
+        \hyperref[sec:message:delete]{delete} & Deletes a spreadsheet \\\hline
+        \hyperref[sec:message:rename]{rename} & Renames a spreadsheet \\\hline
+        \hyperref[sec:message:get_name]{get\_name} & Gets the name of a spreadsheet \\\hline
+        \hyperref[sec:message:list]{list\_spreadsheets} & Lists all spreadsheets \\\hline
+        \hyperref[sec:message:open]{open} & Subscribes the client to updates \\\hline
+        \hyperref[sec:message:close]{close} & Unsubscribes the client to updates \\\hline
+        \hyperref[sec:message:close]{get\_history} & Gets the edit history of a spreadsheet \\\hline
+        \hyperref[sec:message:close]{get\_spreadsheet} & Gets the contents of a spreadsheet \\\hline
+        \hyperref[sec:message:close]{push} & Pushes edits to be applied to the spreadsheet \\\hline
+        \hyperref[sec:message:close]{undo} & Undoes the most recent edit of a spreadsheet \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\lstset{language=json,frame=single,numbers=none}
+
+\subsection{Create}
+\label{sec:message:create}
+\input{Sections/commands/create}
+
+\subsection{Delete}
+\label{sec:message:delete}
+\input{Sections/commands/delete}
+
+\subsection{Rename}
+\label{sec:message:rename}
+\input{Sections/commands/rename}
+
+\subsection{Get Name}
+\label{sec:message:get_name}
+\input{Sections/commands/get_name}
+
+\subsection{List}
+\label{sec:message:list}
+\input{Sections/commands/list}
+
+\subsection{Open}
+\label{sec:message:open}
+\input{Sections/commands/open}
+
+\subsection{Close}
+\label{sec:message:close}
+\input{Sections/commands/close}
+
+\subsection{Get History}
+\label{sec:message:get_history}
+\input{Sections/commands/get_history}
+
+\subsection{Get Spreadsheet}
+\label{sec:message:get_spreadsheet}
+\input{Sections/commands/get_spreadsheet}
+
+\subsection{Undo}
+\label{sec:message:undo}
+\input{Sections/commands/undo}
+
+\subsection{Push}
+\label{sec:message:push}
+\input{Sections/commands/push}

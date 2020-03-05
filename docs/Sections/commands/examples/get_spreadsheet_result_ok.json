@@ -1,0 +1,8 @@
+{
+    "result": "get_spreadsheet",
+    "ok": true,
+    "spreadsheet": {
+        "A1": "foo",
+        "A2": "bar"
+    }
+}

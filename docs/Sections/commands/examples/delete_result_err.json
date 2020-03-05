@@ -1,0 +1,5 @@
+{
+    "result": "delete",
+    "ok": false,
+    "error": "failed to delete the spreadsheet"
+}

@@ -1,0 +1,5 @@
+{
+    "result": "close",
+    "ok": false,
+    "error": "Spreadsheet is not open"
+}

@@ -1,0 +1,8 @@
+{
+    "result": "open",
+    "ok": true,
+    "spreadsheet": {
+        "A1": "foo",
+        "A2": "bar"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "command": "get_history",
+    "ok": true,
+    "edits": [
+        {
+            "A1": 1,
+            "B1": "=A1"
+        },
+        {
+            "A2": "bar"
+        }
+    ]
+}
