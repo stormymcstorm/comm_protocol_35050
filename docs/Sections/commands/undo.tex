@@ -1,5 +1,12 @@
-% TODO
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The \emph{undo} command is used to undo the most recent edit. This command 
+will rollback the history of the spreadsheet, but will not erase the edit 
+that was rolled-back so that it can still be accessed by \hyperref[sec:message:get_history]{get\_history}. 
+Undo will trigger an \hyperref[lst:update:edits]{update} to be sent to all 
+clients who have the spreadsheet open informing them that an edit has been 
+made. While an undo is not actually an edit, for the purpose of updating 
+the clients, undoes will be treated as if the reapply the previous edit. 
+This command can fail if there is no spreadsheet that matches the provided \emph{id}, 
+or if an error occurs on the server.
 
 \subsubsection{Undo Command}
 In addition to the \emph{command} field which will have a value of "undo", this command expects the following fields:

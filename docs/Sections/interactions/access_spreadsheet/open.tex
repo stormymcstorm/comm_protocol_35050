@@ -1,2 +1,8 @@
-% TODO
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The client will need to stay updated with the current contents of the 
+spreadsheet, so this protocol provides an \hyperref[sec:message:open]{open} 
+command, which will accept the \emph{id} of the spreadsheet that the client 
+would like to open. The server will respond to this command with the current 
+contents of the spreadsheet, as well as adding the client as a subscriber to 
+all future \hyperref[sec:message:updates]{updates} regarding the spreadsheets. These updates will contain the 
+current state of the spreadsheet and delete and rename notifications for the 
+spreadsheet. 

@@ -1,5 +1,13 @@
-% TODO
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The \emph{open} command is used to subscribe to updates for a specific spreadsheet. 
+This command will cause the server to add the current \href{https://en.wikipedia.org/wiki/Transmission_Control_Protocol}{TCP} 
+connection with the client to a list of subscribers that will receive updates 
+associated with a specific sheet. If a client fails to receive any update, it 
+will be removed from the subscribers list and will need to reopen the 
+spreadsheet to begin receiving updates again. The server will respond to the 
+open command with the current contents of the spreadsheet in the same way it 
+does for the \hyperref[sec:message:get_spreadsheet]{get\_spreadsheet} command. 
+This command can fail if there is no spreadsheet that matches the provided \emph{id}, 
+or if an error occurs on the server.
 
 \subsubsection{Open Command}
 In addition to the \emph{command} field which will have a value of "open", this command expects the following fields:
@@ -32,6 +40,7 @@ The following are examples of results of the \emph{open} command:
 \lstinputlisting[caption={open result (error) message},label={lst:result:err:open}]{Sections/commands/examples/open_result_err.json}
 
 \subsubsection{Updates}
+\label{sec:message:updates}
 There are three variants of the updates that clients will receive for the spreadsheets they have open: \emph{delete}, \emph{rename} and \emph{edits}.
 Each update message will contain an \emph{update} field which will identify the type of update and an \emph{id} field which will identify the spreadsheet
 the update is for. The \emph{delete} update will contain only the \emph{update} and \emph{id} fields which indicate that the spreadsheet has been deleted.
