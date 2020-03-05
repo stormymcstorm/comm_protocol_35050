@@ -22,6 +22,74 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \lstset{language=json,frame=single,numbers=none,captionpos=b}
 
+\subsection{Common Data Types}
+
+\subsubsection{Command}
+\label{sec:message:command}
+
+All \emph{Command}s contain the \emph{command} field which is used to identify the command being executed.
+All \emph{Command}s will contain the following fields:
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}\hline
+            Field & Type & Description \\\hline
+            command & string & The command to execute \\\hline
+            $\ldots$ & any & Command parameters \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsubsection{Result}
+\label{sec:message:result}
+
+There server will respond to each \emph{Command} with a \emph{Result}. \emph{Result}s have two 
+variants: \emph{ok} and \emph{error}. All \emph{Result}s will contain the following fields:
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}\hline
+            Field & Type & Description \\\hline
+            result & string & Identifies the command this result is for \\\hline
+            ok & boolean & Whether or not the command was successful \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+If the \emph{Result} is ok ($ok = true$) then the \emph{Result} may contain addition fields
+that contain the results of the command. Otherwise the \emph{Result} will contain the following fields:
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}\hline
+            Field & Type & Description \\\hline
+            error & string & A description of the error that occurred. \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsubsection{Edits and Spreadsheet}
+\label{sec:message:edits}
+\label{sec:message:spreadsheet}
+
+Various commands will accept as parameters or return as a result the contents of a spreadsheet,
+both \emph{Edit}s and \emph{Spreadsheet}s will contain spreadsheet contents. They differ in that
+a \emph{Spreadsheet} object must contain the contents of a whole spreadsheet while a \emph{Edit}
+object may contain a subset of the contents of a spreadsheet. Both \emph{Edit}s and \emph{Spreadsheet}s
+will contain the following fields:
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}\hline
+            Field & Type & Description \\\hline
+            \$CellName & string & The contents of \$CellName. \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+These data types are simply a mapping between cell names and their contents, valid cell names are a
+capital letter from "A" to "Z" followed by a number from 1 to 99.
+
 \subsection{Create}
 \label{sec:message:create}
 \input{Sections/commands/create}
