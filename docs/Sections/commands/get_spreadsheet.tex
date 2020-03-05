@@ -1,8 +1,32 @@
 % TODO
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+\subsubsection{Get Spreadsheet Command}
+In addition to the \emph{command} field which will have a value of "get\_spreadsheet", this command expects the following fields:
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}\hline
+            Field & Type & Description \\\hline
+            id & number & The \emph{id} of the spreadsheet whose contents to get. \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+The following is an example of a \emph{get\_spreadsheet} command:
 \lstinputlisting[caption={get\_spreadsheet command message},label={lst:command:get_spreadsheet}]{Sections/commands/examples/get_spreadsheet.json}
 
+\subsubsection{Get Spreadsheet Results}
+The result of this command will contain the \hyperref[sec:message:result]{standard result} fields, in addition to the following fields to be included for \underline{ok} results:
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|c|}\hline
+            Field & Type & Description \\\hline
+            spreadsheet & \hyperref[sec:message:spreadsheet]{Spreadsheet} & The contents of the requested spreadsheet. \\\hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+The following are examples of results of the \emph{get\_spreadsheet} command:
 \lstinputlisting[caption={get\_spreadsheet result (ok) message},label={lst:result:ok:get_spreadsheet}]{Sections/commands/examples/get_spreadsheet_result_ok.json}
 
 \lstinputlisting[caption={get\_spreadsheet result (error) message},label={lst:result:err:get_spreadsheet}]{Sections/commands/examples/get_spreadsheet_result_err.json}

@@ -4,10 +4,10 @@ resulting from this command will be purely due to an error occurring on the
 server, for example, if the server does not have the capacity for a new 
 spreadsheet.
 
-\subsubsection{Command}
+\subsubsection{Create Command}
 
 In addition to the \emph{command} field which will have a value of "create", this command expects the following fields:
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline
@@ -19,9 +19,9 @@ In addition to the \emph{command} field which will have a value of "create", thi
 The following is an example of a \emph{create} command:
 \lstinputlisting[caption={create command message},label={lst:command:create}]{Sections/commands/examples/create.json}
 
-\subsubsection{Results}
+\subsubsection{Create Results}
 The result of this command will contain the \hyperref[sec:message:result]{standard result} fields, in addition to the following fields to be included for \underline{ok} results:
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline

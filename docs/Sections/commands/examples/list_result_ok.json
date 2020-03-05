@@ -1,5 +1,5 @@
 {
-    "result": "list",
+    "result": "list_spreadsheets",
     "ok": true,
     "spreadsheets": [
         1, 2, 3, 4

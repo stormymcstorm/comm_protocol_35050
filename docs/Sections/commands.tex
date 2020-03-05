@@ -1,7 +1,7 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 % Table describing all of the commands
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|}\hline
         Command & Description \\\hline
@@ -30,7 +30,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 All \emph{Command}s contain the \emph{command} field which is used to identify the command being executed.
 All \emph{Command}s will contain the following fields:
 
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline
@@ -46,7 +46,7 @@ All \emph{Command}s will contain the following fields:
 There server will respond to each \emph{Command} with a \emph{Result}. \emph{Result}s have two 
 variants: \emph{ok} and \emph{error}. All \emph{Result}s will contain the following fields:
 
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline
@@ -59,7 +59,7 @@ variants: \emph{ok} and \emph{error}. All \emph{Result}s will contain the follow
 If the \emph{Result} is ok ($ok = true$) then the \emph{Result} may contain addition fields
 that contain the results of the command. Otherwise the \emph{Result} will contain the following fields:
 
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline
@@ -78,7 +78,7 @@ a \emph{Spreadsheet} object must contain the contents of a whole spreadsheet whi
 object may contain a subset of the contents of a spreadsheet. Both \emph{Edit}s and \emph{Spreadsheet}s
 will contain the following fields:
 
-\begin{table}[h!]
+\begin{table}[H]
     \begin{center}
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline
@@ -106,7 +106,7 @@ capital letter from "A" to "Z" followed by a number from 1 to 99.
 \label{sec:message:get_name}
 \input{Sections/commands/get_name}
 
-\subsection{List}
+\subsection{List Spreadsheets}
 \label{sec:message:list}
 \input{Sections/commands/list}
 
