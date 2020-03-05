@@ -1,5 +1,9 @@
-% TODO
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The rename command is used to rename an existing spreadsheet. Rename will 
+change the \emph{name} that is associated with the spreadsheet. This command 
+can fail if there is no spreadsheet that matches the provided \emph{id}, or 
+if an error occurs on the server. Renaming a spreadsheet will trigger an 
+\hyperref[lst:update:rename]{update} to be sent to all clients who have the 
+spreadsheet open, informing them that the name of the spreadsheet has changed.
 
 \subsubsection{Rename Command}
 In addition to the \emph{command} field which will have a value of "rename", this command expects the following fields:
