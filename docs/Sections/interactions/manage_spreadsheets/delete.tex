@@ -1,1 +1,12 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+To delete a spreadsheet the client will use the \hyperref[sec:message:delete]{delete} 
+command, which accepts the \emph{id} of the spreadsheet that is to be deleted. This will 
+delete the spreadsheet from the spreadsheet list and all of its history; it will also trigger 
+an update for all clients who currently have the spreadsheet \hyperref[sec:message:open]{open}, 
+notifying them that the spreadsheet has been deleted.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=2.5in]{Figures/delete_sprd.png}
+        \caption{Deleting a spreadsheet sequence diagram}
+    \end{center}
+\end{figure}

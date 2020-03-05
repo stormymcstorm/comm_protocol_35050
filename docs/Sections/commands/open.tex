@@ -30,3 +30,15 @@ The following are examples of results of the \emph{open} command:
 \lstinputlisting[caption={open result (ok) message},label={lst:result:ok:open}]{Sections/commands/examples/open_result_ok.json}
 
 \lstinputlisting[caption={open result (error) message},label={lst:result:err:open}]{Sections/commands/examples/open_result_err.json}
+
+\subsubsection{Updates}
+There are three variants of the updates that clients will receive for the spreadsheets they have open: \emph{delete}, \emph{rename} and \emph{edits}.
+Each update message will contain an \emph{update} field which will identify the type of update and an \emph{id} field which will identify the spreadsheet
+the update is for. The \emph{delete} update will contain only the \emph{update} and \emph{id} fields which indicate that the spreadsheet has been deleted.
+The \emph{rename} update will contain the standard fields, as well as a \emph{name} field which will contain the new name of the spreadsheet. The \emph{edits}
+update will contain a \emph{edits} field which will contain an array of \hyperref[sec:message:edits]{Edit} objects in order from oldest to newest edits.
+The following are examples of the three variants of the update messages:
+
+\lstinputlisting[caption={delete update message},label={lst:update:delete}]{Sections/commands/examples/update_delete.json}
+\lstinputlisting[caption={rename update message},label={lst:update:rename}]{Sections/commands/examples/update_rename.json}
+\lstinputlisting[caption={edits update message},label={lst:update:edits}]{Sections/commands/examples/update_edits.json}

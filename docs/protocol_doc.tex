@@ -1,15 +1,14 @@
-\documentclass[twoside,a4paper]{refart}
+\documentclass[twoside,a4paper,final,10pt]{refart}
 
 %%%%%%%%%%%
 % IMPORTS %
 %%%%%%%%%%%
 
 \usepackage{makeidx}
+\usepackage{graphicx}
 \usepackage{ifthen}
 \usepackage{float}
-
 \usepackage{xcolor}
-
 \usepackage{listings}
 
 \colorlet{punct}{red!60!black}
@@ -92,7 +91,13 @@
 \pagestyle{myfootings}
 \markboth{\thetitle}{\thetitle}
 
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
+
+% \setlength\marginparwidth {1in}
+% \setlength\marginparsep {0in}
+% \setlength\parindent{-1in}Z`
+% \newdimen\fullwidth
+\settextfraction{.90}
 
 %%%%%%%%%%%%
 % DOCUMENT %
@@ -126,7 +131,6 @@
 \input{Sections/interactions.tex}
 
 \section{Commands}
-
 \input{Sections/commands}
 
 \end{document}

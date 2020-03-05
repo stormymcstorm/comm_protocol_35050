@@ -1,1 +1,17 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The client’s other main responsibility is to update the spreadsheet stored 
+on the server. This protocol defines two commands to be used for editing a 
+spreadsheet: \hyperref[sec:message:push]{push} and \hyperref[sec:message:undo]{undo}. 
+All other required edits can be composed using these two commands. These 
+commands do alter the contents of the spreadsheet.
+
+\subsubsection{Applying an edit to the spreadsheet}
+\input{Sections/interactions/editing_spreadsheet/push}
+
+\subsubsection{Undoing an edit}
+\input{Sections/interactions/editing_spreadsheet/undo}
+
+\subsubsection{Reverting an edit}
+\input{Sections/interactions/editing_spreadsheet/revert}
+
+\subsubsection{Synchroizing with the server after being offline}
+\input{Sections/interactions/editing_spreadsheet/offline}

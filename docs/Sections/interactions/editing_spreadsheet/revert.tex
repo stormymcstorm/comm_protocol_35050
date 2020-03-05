@@ -1,0 +1,7 @@
+The client may want to revert the spreadsheet to a previous state, that is, 
+reapplying an earlier edit to the spreadsheet. This can be accomplished 
+through the \hyperref[sec:message:get_history]{get\_history} and \hyperref[sec:message:push]{push} 
+commands. The client must simply get the history of the desired spreadsheet, 
+select the edit to revert to, and then push that edit to the server as if it 
+were a new edit. Since, \hyperref[sec:message:get_history]{get\_history} 
+returns edits that have been undone, it is possible to revert an undo.

@@ -1,0 +1,8 @@
+There are a few reasons the client would want to get a complete history of a 
+spreadsheet, for example, if the client wanted to be able to revert the 
+spreadsheet to the state it was an hour ago. The client can access the 
+complete history of a spreadsheet using the \hyperref[sec:message:get_history]{get\_history} 
+command, which accepts the \emph{id} of the spreadsheet whose history to get. 
+The server will respond with a list of all the edits that have been made to 
+the spreadsheet. The response will include edits that have been undone and 
+will indicate which edit is the most recent.
