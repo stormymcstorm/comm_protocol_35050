@@ -1,6 +1,7 @@
 {
     "result": "get_spreadsheet",
     "ok": true,
+    "current_edit": 4,
     "spreadsheet": {
         "A1": "foo",
         "A2": "bar"

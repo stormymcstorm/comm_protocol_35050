@@ -46,7 +46,8 @@ Each update message will contain an \emph{update} field which will identify the 
 the update is for. The \emph{delete} update will contain only the \emph{update} and \emph{id} fields which indicate that the spreadsheet has been deleted.
 The \emph{rename} update will contain the standard fields, as well as a \emph{name} field which will contain the new name of the spreadsheet. The \emph{edits}
 update will contain a \emph{edits} field which will contain an array of \hyperref[sec:message:edits]{Edit} objects in order from oldest to newest edits.
-The update will contain all edits that have been made since the last update.
+The update will contain all edits that have been made since the last update. The update will also contain a \emph{start\_id} field which will contain the edit id,
+of the first edit, each of the following edit ids can be computed by incrementing the edit id.
 The following are examples of the three variants of the update messages:
 
 \lstinputlisting[caption={delete update message},label={lst:update:delete}]{Sections/commands/examples/update_delete.json}

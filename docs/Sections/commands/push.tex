@@ -8,10 +8,14 @@ In addition to the \emph{command} field which will have a value of "push", this 
         \begin{tabular}{|c|c|c|}\hline
             Field & Type & Description \\\hline
             id & number & The \emph{id} of the spreadsheet to perform the push on. \\\hline
+            from\_id & number & The \emph{id} of the edit preceding the provided edits. \\\hline
             edits & \hyperref[sec:message:edits]{Edit}[] & The edits to apply to the spreadsheet. \\\hline
         \end{tabular}
     \end{center}
 \end{table}
+The \emph{from\_id} specifies the id of the most recent edit received from the server, this allows clients to push changes
+based on an earlier version of the spreadsheet. This edit id will most likely come from spreadsheet \hyperref[lst:update:edits]{updates},
+a call to \hyperref[sec:message:get_spreadsheet]{get\_spreadsheet}
 
 The following is an example of a \emph{push} command:
 \lstinputlisting[caption={push command message},label={lst:command:push}]{Sections/commands/examples/push.json}
