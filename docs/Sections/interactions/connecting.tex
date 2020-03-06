@@ -1,6 +1,7 @@
 The client will open a \href{https://en.wikipedia.org/wiki/Transmission_Control_Protocol}{TCP} 
 connection to the server on port 2112 after the connection has been opened, 
 the server will start accepting messages formatted as \href{https://en.wikipedia.org/wiki/JSON}{JSON strings}. 
+Each message will be delimited by a null character.
 This connection may be closed and reopened at the clients’ discretion, but any open spreadsheet will need to be reopened.
 
 \begin{figure}[H]

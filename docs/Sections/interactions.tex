@@ -2,6 +2,10 @@
 \label{sec:connecting}
 \input{Sections/interactions/connecting}
 
+\subsection{Maintaining a Connection}
+In some cases it might be that the client is unable to properly close the connection to the server. In order to determine when it is appropriate for the server to remove a client from its subscribers, or for a client to begin editing in offline mode, we can periodically send a single null character through the TCP connection. The details of this procedure (the time intervals between sends, number of failed sends before a connection is closed, etc.) can be determined by the implementer, what is important is that both the client and the server can gracefully handle these messages.
+
+
 \subsection{Managing Spreadsheets}
 \label{sec:managing}
 \input{Sections/interactions/manage_spreadsheets}
