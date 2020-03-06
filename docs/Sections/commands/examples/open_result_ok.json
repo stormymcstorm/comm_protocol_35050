@@ -1,6 +1,7 @@
 {
     "result": "open",
     "ok": true,
+    "current_id": 4,
     "spreadsheet": {
         "A1": "foo",
         "A2": "bar"
