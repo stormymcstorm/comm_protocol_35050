@@ -2,6 +2,6 @@
     "result": "list_spreadsheets",
     "ok": true,
     "spreadsheets": [
-        1, 2, 3, 4
+        "sheet1", "sheet2", "sheet3", "sheet4"
     ]
 }

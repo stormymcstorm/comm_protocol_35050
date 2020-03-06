@@ -2,7 +2,5 @@ Undo operations are not considered edits, but simply a rollback of the history
 of the spreadsheet. This protocol provides an \hyperref[sec:message:undo]{undo} 
 command which will put the spreadsheet in the state it was before the most 
 recent edit was applied. \emph{undo} accepts the \emph{id} of the spreadsheet 
-to perform the undo on. This command will trigger an update for all clients 
+to perform the undo on. This command will trigger an \hyperref[sec:message:updates]{update} for all clients 
 that currently have the spreadsheet open.
-
-% TODO: Discuss how the update will look
